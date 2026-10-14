@@ -280,6 +280,15 @@ console.log(starWarsCharacters);
    Stampa: "Più alto: Darth Vader (202 cm)" e "Più basso: ...".
 */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+
+	if (starWarsCharacters[i].height > starWarsCharacters[i+1]) {
+		console.log("Pi")
+	}
+
+	
+}
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9 — Rimuovi i femminili dai nomi (cicli annidati)
