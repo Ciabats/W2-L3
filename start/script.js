@@ -174,22 +174,22 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 	switch (starWarsCharacters[i].eye_color) {
 		case "blue":
 			perColoreOcchi.blue.push(starWarsCharacters[i]);
-			
+
 			break;
 
 		case "yellow":
 			perColoreOcchi.yellow.push(starWarsCharacters[i]);
-			
+
 			break;
 
 		case "brown":
 			perColoreOcchi.brown.push(starWarsCharacters[i]);
-			
+
 			break;
 
 		case "red":
 			perColoreOcchi.red.push(starWarsCharacters[i]);
-			
+
 			break;
 
 		case "blue-gray":
@@ -231,6 +231,7 @@ console.log(`La massa totale dell'equipaggio è: ${massaTotale}kg`);
 */
 
 switch (true) {
+
 	case massaTotale < 500:
 		console.log("Carico Leggero")
 		break;
@@ -251,8 +252,6 @@ switch (true) {
 		console.log("PERICOLO: sovraccarico")
 		break;
 
-	default:
-		break;
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -278,14 +277,23 @@ console.log(starWarsCharacters);
    Stampa: "Più alto: Darth Vader (202 cm)" e "Più basso: ...".
 */
 
+let piùAlto = starWarsCharacters[0];
+let piùBasso = starWarsCharacters[0];
+
 for (let i = 0; i < starWarsCharacters.length; i++) {
 
-	if (starWarsCharacters[i].height > starWarsCharacters[i++].height) {
-		console.log("Più alto:")
+	if (Number(starWarsCharacters[i].height) > Number(piùAlto.height)) {
+		piùAlto = starWarsCharacters[i];
 	}
+	if (Number(starWarsCharacters[i].height) < Number(piùBasso.height)) {
+		piùBasso = starWarsCharacters[i];
+	}
+}	
+
+	console.log(`Il più alto è: ${piùAlto.name} (${piùAlto.height}cm)`);
+	console.log(`Il più basso è: ${piùBasso.name} (${piùBasso.height}cm)`);
 
 
-}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
