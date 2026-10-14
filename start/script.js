@@ -133,15 +133,12 @@ console.log(nomi);
 const personaggiFemminili = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-	const f = starWarsCharacters[i];
-
-	if (f.gender === "female") {
-		const female = {
-			name: f.name,
-			hair_color: f.hair_color,
-			eye_color: f.eye_color,
-		};
-		personaggiFemminili.push(female);
+	if (starWarsCharacters[i].gender === "female") {
+		personaggiFemminili.push({
+			name: starWarsCharacters[i].name,
+			hair_color: starWarsCharacters[i].hair_color,
+			eye_color: starWarsCharacters[i].eye_color,
+		});
 	}
 }
 
@@ -237,19 +234,19 @@ switch (true) {
 		console.log("Carico Leggero")
 		break;
 
-			case massaTotale >= 500 && massaTotale <= 700:
+	case massaTotale >= 500 && massaTotale <= 700:
 		console.log("Carico medio")
 		break;
 
-			case massaTotale >= 700 && massaTotale <= 900:
+	case massaTotale >= 700 && massaTotale <= 900:
 		console.log("Attenzione: oltre 700")
 		break;
 
-			case massaTotale >= 900 && massaTotale <= 1000:
+	case massaTotale >= 900 && massaTotale <= 1000:
 		console.log("Carico critico")
 		break;
 
-			case massaTotale > 1000:
+	case massaTotale > 1000:
 		console.log("PERICOLO: sovraccarico")
 		break;
 
@@ -267,7 +264,7 @@ switch (true) {
 for (let i = 0; i < starWarsCharacters.length; i++) {
 	if (starWarsCharacters[i].gender === "n/a") {
 		starWarsCharacters[i].gender = "robot";
-	}	
+	}
 }
 
 console.log(starWarsCharacters);
@@ -282,11 +279,11 @@ console.log(starWarsCharacters);
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
 
-	if (starWarsCharacters[i].height > starWarsCharacters[i+1]) {
-		console.log("Pi")
+	if (starWarsCharacters[i].height > starWarsCharacters[i++].height) {
+		console.log("Più alto:")
 	}
 
-	
+
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
