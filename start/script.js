@@ -159,6 +159,7 @@ const perColoreOcchi = {
 	"blue-gray": [],
 };
 
+console.log(perColoreOcchi);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -170,35 +171,35 @@ const perColoreOcchi = {
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
 
-	const character = starWarsCharacters[i];
-
-	switch (true) {
-		case character.eye_color === "blue":
-			perColoreOcchi.blue.push(character.name);
-			console.log(`Occhi color blue ${perColoreOcchi.blue}`);
+	switch (starWarsCharacters[i].eye_color) {
+		case "blue":
+			perColoreOcchi.blue.push(starWarsCharacters[i]);
+			
 			break;
 
-		case character.eye_color === "yellow":
-			perColoreOcchi.yellow.push(character.name);
-			console.log(`Occhi color giallo ${perColoreOcchi.yellow}`);
+		case "yellow":
+			perColoreOcchi.yellow.push(starWarsCharacters[i]);
+			
 			break;
 
-		case character.eye_color === "brown":
-			perColoreOcchi.brown.push(character.name);
-			console.log(`Occhi color marrone ${perColoreOcchi.brown}`);
+		case "brown":
+			perColoreOcchi.brown.push(starWarsCharacters[i]);
+			
 			break;
 
-		case character.eye_color === "red":
-			perColoreOcchi.red.push(character.name);
-			console.log(`Occhi color rosso ${perColoreOcchi.red}`);
+		case "red":
+			perColoreOcchi.red.push(starWarsCharacters[i]);
+			
 			break;
 
-		case character.eye_color === "blue-gray":
-			perColoreOcchi["blue-gray"].push(character.name);
-			console.log(`Occhi color blue-gray ${perColoreOcchi["blue-gray"]}`);
+		case "blue-gray":
+			perColoreOcchi["blue-gray"].push(starWarsCharacters[i]);
+
 			break;
 	}
 }
+
+console.log(perColoreOcchi);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -215,7 +216,7 @@ while (i < starWarsCharacters.length) {
 	massaTotale += Number(starWarsCharacters[i].mass);
 	i++;
 }
-console.log(massaTotale);
+console.log(`La massa totale dell'equipaggio è: ${massaTotale}kg`);
 
 
 /* SCRIVI QUI LA TUA RISPOSTA */
