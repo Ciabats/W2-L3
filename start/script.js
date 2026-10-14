@@ -264,6 +264,14 @@ switch (true) {
    Stampa l'array.
 */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+	if (starWarsCharacters[i].gender === "n/a") {
+		starWarsCharacters[i].gender = "robot";
+	}	
+}
+
+console.log(starWarsCharacters);
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 8 — Più alto e più basso
