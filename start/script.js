@@ -354,6 +354,8 @@ if (personaggio.hair_color !== "n/a" && personaggio.hair_color !== "none") {
    Stampa: "blue: 4 personaggi", "yellow: 2 personaggi", ecc.
 */
 
-
+for(const colore in perColoreOcchi){
+	console.log(`${colore}: ha ${perColoreOcchi[colore].length} personaggi`)
+}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
