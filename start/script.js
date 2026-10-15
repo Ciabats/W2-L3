@@ -288,10 +288,10 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 	if (Number(starWarsCharacters[i].height) < Number(piùBasso.height)) {
 		piùBasso = starWarsCharacters[i];
 	}
-}	
+}
 
-	console.log(`Il più alto è: ${piùAlto.name} (${piùAlto.height}cm)`);
-	console.log(`Il più basso è: ${piùBasso.name} (${piùBasso.height}cm)`);
+console.log(`Il più alto è: ${piùAlto.name} (${piùAlto.height}cm)`);
+console.log(`Il più basso è: ${piùBasso.name} (${piùBasso.height}cm)`);
 
 
 
@@ -303,6 +303,19 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
    Stampa lunghezza prima e dopo.
 */
 
+console.log(`Lunghezza array nomi prima del ciclo for: ${nomi.length} - ${nomi}`);
+
+for (let i = 0; i < nomi.length; i++) {
+	for (let j = 0; j < personaggiFemminili.length; j++) {
+		if (nomi[i] === personaggiFemminili[j].name) {
+			nomi.splice(i, 1);
+			i--;
+			break;
+		}
+
+	}
+}
+console.log(`Lunghezza array nomi dopo ciclo for: ${nomi.length} - ${nomi}`)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10 — Personaggio casuale
@@ -312,11 +325,35 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
    if su hair_color !== "n/a" && hair_color !== "none": stampa "Capelli: X" o "Senza capelli".
 */
 
+const index = Math.floor(Math.random() * starWarsCharacters.length); // Sceglie un indice casuale tra 0 e starWarsCharacters.length - 1
+
+const personaggio = starWarsCharacters[index]; // Prende il personaggio corrispondente
+
+console.log(`Il personaggio scelto è ${personaggio.name}`)
+
+if (personaggio.gender === "female") {
+
+	console.log(`Lei è alta ${personaggio.height}cm`);
+
+} else {
+	console.log(`Lui è alto ${personaggio.height}cm`)
+}
+
+if (personaggio.hair_color !== "n/a" && personaggio.hair_color !== "none") {
+
+	console.log(`Ha capelli: ${personaggio.hair_color}`);
+
+} else {
+	console.log(`Personaggio senza capelli`)
+}
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* --EXTRA-- ESERCIZIO 11 — Conta per colore di occhi
    For...in sulle chiavi di perColoreOcchi.
    Stampa: "blue: 4 personaggi", "yellow: 2 personaggi", ecc.
 */
+
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
